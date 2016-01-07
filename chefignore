@@ -93,3 +93,27 @@ Vagrantfile
 # Travis #
 ##########
 .travis.yml
+
+# Additional directory ignores                                #
+# see also https://github.com/berkshelf/berkshelf/issues/1492 #
+###############################################################
+cookbooks
+berks-cookbooks
+spec
+features
+vendor
+test
+
+# Additional file ignores #
+###########################
+chefignore
+*.deb
+*.tar.gz
+circle.yml
+.bundle
+.kitchen
+.kitchen.yml
+.rubocop.yml
+Gemfile
+Gemfile.lock
+Rakefile

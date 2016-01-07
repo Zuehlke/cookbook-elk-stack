@@ -7,6 +7,9 @@ Style/EmptyLinesAroundBlockBody:
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 
+Style/NumericLiterals:
+  Enabled: false
+
 AllCops:
   Exclude:
     - Rakefile

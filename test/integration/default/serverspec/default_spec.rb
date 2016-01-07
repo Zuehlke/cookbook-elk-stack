@@ -70,6 +70,13 @@ describe 'kibana' do
   end
 end
 
+describe 'sysconfig' do
+  it 'is configured with ipv6 disabled' do
+    cmd = command('cat /proc/sys/net/ipv6/conf/all/disable_ipv6')
+    expect(cmd.stdout).to contain '1'
+  end
+end
+
 describe 'logstash' do
   it 'is configured with sv for init' do
     cmd = command('sv check logstash')
@@ -78,5 +85,10 @@ describe 'logstash' do
 
   describe service('logstash') do
     it { should be_running }
+  end
+
+  describe port(10514) do
+    it { should be_listening.with('tcp') }
+    it { should be_listening.with('udp') }
   end
 end

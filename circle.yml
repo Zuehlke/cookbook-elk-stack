@@ -19,5 +19,6 @@ dependencies:
 test:
   override:
     - bundle exec rake unit
-    - bundle exec kitchen verify:
-        timeout: 900
+    - bundle exec berks package $CIRCLE_ARTIFACTS/coobooks-$CIRCLE_BRANCH.tar.gz
+    #- bundle exec kitchen verify:
+    #    timeout: 900
