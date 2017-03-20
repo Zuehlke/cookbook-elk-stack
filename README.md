@@ -1,5 +1,8 @@
 # ELK Stack
 
+[![Circle CI](https://circleci.com/gh/Zuehlke/cookbook-elk-stack/tree/master.svg?style=shield)](https://circleci.com/gh/Zuehlke/cookbook-elk-stack/tree/master)
+
+
 This is an attempt to create infrastructure that will allow us to easily visualize and analyze test metrics, log files, etc using the ELK stack.
 
 The solution at the moment is elasticsearch with kibana running on a single Ubuntu node for data storage and visualization.

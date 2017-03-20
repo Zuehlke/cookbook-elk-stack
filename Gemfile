@@ -3,6 +3,11 @@ source 'https://rubygems.org'
 gem 'chef', '12.4.1'
 gem 'berkshelf', '4.0.1'
 
+# pin for ruby 2.1.5 compatibility
+gem 'nio4r', '1.2.1'
+# pin for `berks package` compatibility with chef 12.4.1
+gem 'ridley', '4.3.0'
+
 group :test do
   gem 'foodcritic', '5.0.0'
   gem 'rubocop', '0.35.1'
